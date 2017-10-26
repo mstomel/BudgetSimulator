@@ -3,7 +3,7 @@ package com.company;
 class backEnd {
 
     public double prices[];
-    public double budget;
+    public static double budget;
     void setBudget(double budge) {
 
         budget = budge;
@@ -11,12 +11,13 @@ class backEnd {
 
     }
     private boolean check3;
-    void addBarcode(int barcode, double price) {
+    void addBarcode(double barcode, double price) {
         
         //UPC-A barcodes are  12 digits long
-        String check1 = Integer.toString(barcode);
+        String check1 = Double.toString(barcode);
         int check2 = ((((check1.charAt(0) + check1.charAt(2) + check1.charAt(4) + check1.charAt(6) + check1.charAt(8) + check1.charAt(10))*3) + check1.charAt(1) + check1.charAt(3) + check1.charAt(5) + check1.charAt(7) + check1.charAt(9)) % 10);
         // ((((check1.charAt(0) + check1.charAt(2) + check1.charAt(4) + check1.charAt(6) + check1.charAt(8) + check1.charAt(10))*3) + check1.charAt(1) + check1.charAt(3) + check1.charAt(5) + check1.charAt(7) + check1.charAt(9)) % 10)
+        //test bar UPC-A: 036000241457
 
         if (check2 == 0) {
 
@@ -43,14 +44,16 @@ class backEnd {
         }
         if ((check1.length() == 12) && check3) {
 
-            prices[barcode] = price;
+            prices[(int)barcode] = price;
             System.out.println("successfully saved " + barcode + "as $" + price);
 
         }
     }
-    void priceCheck(int barcode) {
+    double priceCheck(int barcode) {
 
-        System.out.println("price of " + barcode +" is " + prices[barcode]);
+        //System.out.println("price of " + barcode +" is " + prices[barcode]);
+        double p = prices[barcode];
+        return p;
 
     }
 }
