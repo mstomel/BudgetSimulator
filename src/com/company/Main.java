@@ -6,6 +6,7 @@ public class Main {
 
     public static backEnd a = new backEnd();
     public static frontEnd b = new frontEnd();
+    public static UPC c = new UPC();
     public static void main(String[] args) {
 
         int mode = 1;  //decides mode, I guess
@@ -25,7 +26,7 @@ public class Main {
             else if (mode == 1) {
 
                 System.out.println("input barcode");
-                int barcode = bar.nextInt();
+                long barcode = bar.nextLong();
                 System.out.println("input price");
                 double price = bar.nextDouble();
                 a.addBarcode(barcode, price);
