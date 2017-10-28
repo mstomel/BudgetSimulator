@@ -8,6 +8,20 @@ public class Main {
     public static frontEnd b = new frontEnd();
     public static UPC c = new UPC();
     public static void main(String[] args) {
+    
+
+       // Scanner in  = new Scanner(System.in);
+
+        //while(mode != 0){
+           // System.out.println("Press 1 to continue and 0 to exit");
+           // mode = in.nextInt();
+            //if(mode == 2) {
+                new tester1();
+
+            
+
+        
+
 
         int mode = 1;  //decides mode, I guess
         Scanner mo = new Scanner(System.in); //decides mode
