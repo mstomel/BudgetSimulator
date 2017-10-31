@@ -2,7 +2,7 @@ package com.company;
 
 public class UPC {
 
-    public boolean UP = false;
+    public Boolean UP = false;
     // main(): application entry point
     public void checker(long barcode) {
         final long MAX_POSSIBLE_UPC_CODE = 999999999999L;
