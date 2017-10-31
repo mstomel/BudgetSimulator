@@ -35,8 +35,8 @@ public class Main {
             else if (mode == 2) {
 
                 System.out.println("input barcode");
-                int barcode = bar.nextInt();
-                System.out.println("price is " + a.priceCheck(barcode));
+                long barcode = bar.nextLong();
+                System.out.println("price is $" + a.priceCheck(barcode));
 
             }
             else if (mode == 3) {

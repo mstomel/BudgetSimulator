@@ -17,7 +17,7 @@ public class frontEnd {
         boolean shopping = true;
         while (shopping) {
 
-            if (active.nextInt() == 0) {
+            if (active.nextLong() == 0) {
 
                 shopping = false;
 

@@ -7,7 +7,7 @@ import static com.company.Main.c;
 
 class backEnd {
 
-    public Map<String, Double> data = new HashMap<String, Double>();
+    public Map<Long, Double> data = new HashMap<Long, Double>();
     public double prices[];
     public static double budget;
     void setBudget(double budge) {
@@ -22,9 +22,9 @@ class backEnd {
         c.checker(barcode);
         if (c.UP) {
 
+            data.put(barcode, price);
             //prices[(int)barcode] = price;
-            map<barcode>
-            System.out.println("successfully saved " + barcode + "as $" + price);
+            System.out.println("successfully saved " + barcode + " as $" + price);
 
         }
         else if (c.UP = false) {
@@ -70,11 +70,10 @@ class backEnd {
 
         }*/
     }
-    double priceCheck(int barcode) {
+    double priceCheck(long barcode) {
 
+        return data.get(barcode);
         //System.out.println("price of " + barcode +" is " + prices[barcode]);
-        double p = prices[barcode];
-        return p;
 
     }
 }
