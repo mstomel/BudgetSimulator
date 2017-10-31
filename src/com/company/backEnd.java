@@ -1,9 +1,13 @@
 package com.company;
 
+import java.util.Map;
+import java.util.HashMap;
+
 import static com.company.Main.c;
 
 class backEnd {
 
+    public Map<String, Double> data = new HashMap<String, Double>();
     public double prices[];
     public static double budget;
     void setBudget(double budge) {
@@ -18,7 +22,8 @@ class backEnd {
         c.checker(barcode);
         if (c.UP) {
 
-            prices[(int)barcode] = price;
+            //prices[(int)barcode] = price;
+            map<barcode>
             System.out.println("successfully saved " + barcode + "as $" + price);
 
         }
