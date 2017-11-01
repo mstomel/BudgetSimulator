@@ -1,5 +1,5 @@
 package com.company;
 
 public class barcodeTester {
-    //add the barcode stuff here or make the right classes for it
+    //In production for the external inputs from cameras and reading the barcodes
 }
