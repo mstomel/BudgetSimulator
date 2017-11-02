@@ -6,7 +6,6 @@ public class Main {
 
     static backEnd a = new backEnd();
     private static frontEnd b = new frontEnd();
-    static UPC c = new UPC();
     public static void main(String[] args) {
 
         int mode = 1;  //decides mode, I guess

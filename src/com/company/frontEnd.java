@@ -45,7 +45,7 @@ class frontEnd {
             else {
 
                 budgetRemaining -= a.priceCheck(nextBar);
-                System.out.println("you have " + budgetRemaining + " dollars left");
+                System.out.println("you have $" + budgetRemaining + " left");
 
             }
         }
