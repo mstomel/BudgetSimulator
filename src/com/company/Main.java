@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static backEnd a = new backEnd();
-    public static frontEnd b = new frontEnd();
-    public static UPC c = new UPC();
+    static backEnd a = new backEnd();
+    private static frontEnd b = new frontEnd();
     public static void main(String[] args) {
     
 
@@ -49,8 +48,8 @@ public class Main {
             else if (mode == 2) {
 
                 System.out.println("input barcode");
-                int barcode = bar.nextInt();
-                System.out.println("price is " + a.priceCheck(barcode));
+                long barcode = bar.nextLong();
+                System.out.println("price is $" + a.priceCheck(barcode));
 
             }
             else if (mode == 3) {
