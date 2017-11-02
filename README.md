@@ -1,5 +1,11 @@
 ## BudgetSimulator mitch branch changelog
 
+###     v1.6.0
+
+rebuilt system for changing budget while shopping
+
+added some comments
+
 ###     v1.5.0
 
 same as 1.4.1
