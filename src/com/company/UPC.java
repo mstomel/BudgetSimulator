@@ -1,15 +1,14 @@
 package com.company;
 
-public class UPC {
+class UPC {
 
-    public Boolean UP = false;
+    Boolean UP = false;
     // main(): application entry point
-    public void checker(long barcode) {
+    void checker(long barcode) {
         final long MAX_POSSIBLE_UPC_CODE = 999999999999L;
 
         // set input stream and get number
         long input = barcode;
-        long number = input;
 
         // determine whether number is a possible upc code
         if ((input < 0) || (input > MAX_POSSIBLE_UPC_CODE)) {
@@ -20,30 +19,30 @@ public class UPC {
             // might be a upc code
 
             // determine individual digits
-            int d12 = (int) (number % 10);
-            number /= 10;
-            int d11 = (int) (number % 10);
-            number /= 10;
-            int d10 = (int) (number % 10);
-            number /= 10;
-            int d9 = (int) (number % 10);
-            number /= 10;
-            int d8 = (int) (number % 10);
-            number /= 10;
-            int d7 = (int) (number % 10);
-            number /= 10;
-            int d6 = (int) (number % 10);
-            number /= 10;
-            int d5 = (int) (number % 10);
-            number /= 10;
-            int d4 = (int) (number % 10);
-            number /= 10;
-            int d3 = (int) (number % 10);
-            number /= 10;
-            int d2 = (int) (number % 10);
-            number /= 10;
-            int d1 = (int) (number % 10);
-            number /= 10;
+            int d12 = (int) (input % 10);
+            input /= 10;
+            int d11 = (int) (input % 10);
+            input /= 10;
+            int d10 = (int) (input % 10);
+            input /= 10;
+            int d9 = (int) (input % 10);
+            input /= 10;
+            int d8 = (int) (input % 10);
+            input /= 10;
+            int d7 = (int) (input % 10);
+            input /= 10;
+            int d6 = (int) (input % 10);
+            input /= 10;
+            int d5 = (int) (input % 10);
+            input /= 10;
+            int d4 = (int) (input % 10);
+            input /= 10;
+            int d3 = (int) (input % 10);
+            input /= 10;
+            int d2 = (int) (input % 10);
+            input /= 10;
+            int d1 = (int) (input % 10);
+            //input /= 10;
 
             // compute sums of first 5 even digits and the odd digits
             int m = d2 + d4 + d6 + d8 + d10;
@@ -56,10 +55,6 @@ public class UPC {
             if (r == d12) {
                 // is a upc code
                 UP = true;
-            }
-            else {
-                // not a upc code
-                UP = false;
             }
         }
     }

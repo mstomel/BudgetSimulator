@@ -7,8 +7,8 @@ import static com.company.Main.c;
 
 class backEnd {
 
-    public Map<Long, Double> data = new HashMap<Long, Double>();
-    public static double budget;
+    private Map<Long, Double> data = new HashMap<>();
+    static double budget;
     void setBudget(double budge) {
 
         budget = budge;
@@ -19,14 +19,14 @@ class backEnd {
     void addBarcode(long barcode, double price) {
 
         c.checker(barcode);
-        if (c.UP = true) {
+        if (c.UP) {
 
             data.put(barcode, price);
             //prices[(int)barcode] = price;
             System.out.println("successfully saved " + barcode + " as $" + price);
 
         }
-        else if (c.UP = false) {
+        else {
 
             System.out.println("invalid barcode");
 

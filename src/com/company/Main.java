@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static backEnd a = new backEnd();
-    public static frontEnd b = new frontEnd();
-    public static UPC c = new UPC();
+    static backEnd a = new backEnd();
+    private static frontEnd b = new frontEnd();
+    static UPC c = new UPC();
     public static void main(String[] args) {
 
         int mode = 1;  //decides mode, I guess

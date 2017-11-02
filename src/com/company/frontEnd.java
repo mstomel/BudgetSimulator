@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 import static com.company.Main.a;
 
-public class frontEnd {
+class frontEnd {
 
-    public void shop() {
+    void shop() {
 
         double budgetRemaining = backEnd.budget;
         System.out.println("your budget is " + backEnd.budget);
