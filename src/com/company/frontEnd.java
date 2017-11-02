@@ -6,29 +6,24 @@ import static com.company.Main.a;
 
 class frontEnd {
 
+    private Boolean shopping = true;
+    private Scanner active = new Scanner(System.in); //active shopper or finished shopper
+    private Scanner items = new Scanner(System.in); //gets item barcodes
+    private Scanner bud = new Scanner(System.in); //budget setter
     void shop() {
 
         double budgetRemaining = backEnd.budget;
         System.out.println("your budget is " + backEnd.budget);
-        Scanner active = new Scanner(System.in); //active shopper or finished shopper
-        Scanner items = new Scanner(System.in); //gets item barcodes
-        Scanner bud = new Scanner(System.in); //budget setter
-        boolean shopping = true;
         while (shopping) {
 
-            System.out.println("input next item barcode or press 0 to finish");
-            if (active.nextLong() == 0) {
-
-                shopping = false;
-
-            }
-            else if (budgetRemaining <= 0) {
+            if (budgetRemaining <= 0) {
 
                 System.out.println("you have reached your spending limit");
                 System.out.println("would you like to finish(0) or change budget(1)");
                 if (active.nextInt() == 0 ) {
 
-                    shopping = false;
+                    //shopping = false;
+                    break;
 
                 }
 
@@ -40,9 +35,15 @@ class frontEnd {
 
                 }
             }
-            else if (budgetRemaining > 0){
+            System.out.println("input next item barcode or press 0 to finish");
+            long nextBar = items.nextLong();
+            if (nextBar == 0) {
 
-                long nextBar = items.nextLong();
+                shopping = false;
+
+            }
+            else {
+
                 budgetRemaining -= a.priceCheck(nextBar);
                 System.out.println("you have " + budgetRemaining + " dollars left");
 
