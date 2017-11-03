@@ -17,6 +17,7 @@ public class Main {
             //if(mode == 2) {
                 new tester1();
 
+
             
 
         
@@ -35,14 +36,17 @@ public class Main {
 
                 System.out.println("goodbye");
 
+
             }
             else if (mode == 1) {
 
-                System.out.println("input barcode");
-                long barcode = bar.nextLong();
+                new tester1();
+                int p = Integer.parseInt(tester1.output);
+                long barcode = (long)p;
                 System.out.println("input price");
                 double price = bar.nextDouble();
                 a.addBarcode(barcode, price);
+
 
             }
             else if (mode == 2) {

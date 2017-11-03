@@ -6,10 +6,12 @@ public class tester1 extends JFrame implements ActionListener {
     //awt is the basic ui interface for java
     //swing is more custom friendly
 
-    JTextField tf;
-    JButton b1, b2, b3, b4, b5, b6, b7, b8, b9, b0;
-    String op = "";
-    public tester1(){
+    private JTextField tf;
+    private JLabel dr;
+    private JButton b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, bReturn;
+    static String output = "";
+    private String op = "";
+    tester1(){
 
         //Creation of button and text inout fields.  Text Field is uneditable but that can be changed easily
         //use this basic structure for stuff being pressed that makes stuff happen
@@ -58,8 +60,15 @@ public class tester1 extends JFrame implements ActionListener {
         b0.setBounds(175, 350, 125, 75);
         b0.addActionListener(this);
 
+        bReturn = new JButton("Enter");
+        bReturn.setBounds(300, 350, 125, 75);
+        bReturn.addActionListener(this);
+
+        dr = new JLabel("Please input the barcode");
+        dr.setBounds(170, 25, 150, 20);
 
 
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
         add(tf);
         add(b1);
@@ -72,6 +81,8 @@ public class tester1 extends JFrame implements ActionListener {
         add(b8);
         add(b9);
         add(b0);
+        add(bReturn);
+        add(dr);
 
 
         setSize(500, 600);
@@ -118,6 +129,13 @@ public class tester1 extends JFrame implements ActionListener {
         } else if (e.getSource() == b0) {
             op += "0";
             tf.setText(op);
+        }
+        else if(e.getSource() == bReturn){
+            output = op;
+            op = "";
+            tf.setText(op);
+            dispose();
+
         }
     }
 }
