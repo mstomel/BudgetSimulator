@@ -7,6 +7,7 @@ public class tester2 {
         JFrame test = new JFrame("Hi there");
         test.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         test.setVisible(true);
+        //hjello there
     }
 
 
