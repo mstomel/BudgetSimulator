@@ -7,20 +7,19 @@ public class Main {
     static backEnd a = new backEnd();
     private static frontEnd b = new frontEnd();
     public static void main(String[] args) {
-    
 
-       // Scanner in  = new Scanner(System.in);
+
+        // Scanner in  = new Scanner(System.in);
 
         //while(mode != 0){
-           // System.out.println("Press 1 to continue and 0 to exit");
-           // mode = in.nextInt();
-            //if(mode == 2) {
-                new tester1();
+        // System.out.println("Press 1 to continue and 0 to exit");
+        // mode = in.nextInt();
+        //if(mode == 2) {
+        new tester1();
 
 
-            
 
-        
+
 
 
         int mode = 1;  //decides mode, I guess
@@ -36,17 +35,16 @@ public class Main {
 
                 System.out.println("goodbye");
 
-
             }
             else if (mode == 1) {
 
-                new tester1();
-                int p = Integer.parseInt(tester1.output);
-                long barcode = (long)p;
+                //UI UNDERGOING MAINTENANCE
+                // VVV IS THE FIRST SECTION TO GET WORKABLE UI VVV
+                System.out.println("input barcode");
+                long barcode = bar.nextLong();
                 System.out.println("input price");
                 double price = bar.nextDouble();
                 a.addBarcode(barcode, price);
-
 
             }
             else if (mode == 2) {

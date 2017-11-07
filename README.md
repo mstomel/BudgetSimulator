@@ -3,3 +3,7 @@
 ###     v1.6.0
 
 First branch update with changelog(see mitch or master for initial updates).  Adding integrated u.i. so it works like an actual application.
+
+###     V1.6.1
+
+Entire U.I. undergoing maintenance so any interaction is impossible

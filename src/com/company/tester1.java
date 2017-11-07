@@ -2,15 +2,21 @@ package com.company;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class tester1 extends JFrame implements ActionListener {
+public class tester1 {
     //awt is the basic ui interface for java
     //swing is more custom friendly
+    /*
+
+    !!!!CURRENTLY UNDERGOING MAINTENANCE!!!!
+
 
     private JTextField tf;
     private JLabel dr;
     private JButton b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, bReturn;
     static String output = "";
     private String op = "";
+    static boolean toggle = false;
+    private  JFrame frame;
     tester1(){
 
         //Creation of button and text inout fields.  Text Field is uneditable but that can be changed easily
@@ -68,27 +74,67 @@ public class tester1 extends JFrame implements ActionListener {
         dr.setBounds(170, 25, 150, 20);
 
 
-        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-
-        add(tf);
-        add(b1);
-        add(b2);
-        add(b3);
-        add(b4);
-        add(b5);
-        add(b6);
-        add(b7);
-        add(b8);
-        add(b9);
-        add(b0);
-        add(bReturn);
-        add(dr);
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
 
-        setSize(500, 600);
-        setLayout(null);
-        setVisible(true);
+        frame.add(tf);
+        frame.add(b1);
+        frame.add(b2);
+        frame.add(b3);
+        frame.add(b4);
+        frame.add(b5);
+        frame.add(b6);
+        frame.add(b7);
+        frame.add(b8);
+        frame.add(b9);
+        frame.add(b0);
+        frame.add(bReturn);
+        frame.add(dr);
+
+
+        frame.setSize(500, 600);
+        frame.setLayout(null);
+        frame.setVisible(true);
     }
+    /*
+    private static Object lock = new Object();
+private static JFrame frame = new JFrame();
+/**
+ * @param args
+
+    public static void main(String[] args) {
+
+        frame.setSize(300, 300);
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        frame.setVisible(true);
+
+        Thread t = new Thread() {
+            public void run() {
+                synchronized(lock) {
+                    while (frame.isVisible())
+                        try {
+                            lock.wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    System.out.println("Working now");
+                }
+            }
+        };
+        t.start();
+
+        frame.addWindowListener(new WindowAdapter() {
+
+            @Override
+            public void windowClosing(WindowEvent arg0) {
+                synchronized (lock) {
+                    frame.setVisible(false);
+                    lock.notify();
+                }
+            }
+
+        });
+
     public void actionPerformed(ActionEvent e){
 
         if(e.getSource() == b1){
@@ -132,10 +178,13 @@ public class tester1 extends JFrame implements ActionListener {
         }
         else if(e.getSource() == bReturn){
             output = op;
+            toggle = true;
             op = "";
             tf.setText(op);
-            dispose();
+            frame.dispose();
 
         }
     }
+}
+*/
 }
