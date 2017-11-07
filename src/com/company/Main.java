@@ -11,10 +11,7 @@ public class Main {
 
         // Scanner in  = new Scanner(System.in);
 
-        //while(mode != 0){
-        // System.out.println("Press 1 to continue and 0 to exit");
-        // mode = in.nextInt();
-        //if(mode == 2) {
+
         new tester1();
 
 
