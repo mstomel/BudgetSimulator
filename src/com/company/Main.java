@@ -15,7 +15,7 @@ public class Main {
 
         while (mode!=0) {
             System.out.println("What would you like to do next?");
-            System.out.println("0 to exit, 1 to add a new barcode, 2 to check price, 3 to set budget, and 4 to start shopping");
+            System.out.println("0 to exit, 1 to add a new barcode, 2 to check price, 3 to set budget, 4 to start shopping, or 5 to view database");
             mode = mo.nextInt();
             if (mode == 0) {
 
@@ -48,6 +48,11 @@ public class Main {
             else if (mode == 4) {
 
                 b.shop();
+
+            }
+            else if (mode == 5) {
+
+                System.out.println(a.data.toString());
 
             }
         }

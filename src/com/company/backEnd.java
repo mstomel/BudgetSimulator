@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 class backEnd {
 
-    private Map<Long, Double> data = new HashMap<>(); //maps prices to barcodes
+    Map<Long, Double> data = new HashMap<>(); //maps prices to barcodes
     static double budget; //the budget of the user
     //sets a new budget
     void setBudget(double budge) {
